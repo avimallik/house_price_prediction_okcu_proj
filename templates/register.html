@@ -32,10 +32,15 @@
         <br><br>
         <div class="title">
           <i class="fas fa-pencil-alt"></i> 
-          <h2>Login</h2>
+          <h2>Register</h2>
         </div>
 
         <div class="info">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="email" type="name" class="form-control" name="name" placeholder="Name">
+          </div>
+
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
             <input id="email" type="email" class="form-control" name="email" placeholder="Email">
@@ -48,7 +53,6 @@
         </div>
         <button type="submit" href="/" class="button_submit">Submit</button>
 
-        <p class="msg_register">Don't have an account <a href="{{ url_for('register')}}">Register Here</a></p>
       </form>
 
 
