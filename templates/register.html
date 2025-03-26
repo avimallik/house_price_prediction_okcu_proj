@@ -27,7 +27,45 @@
         </div>
  
 
-   
+      <!-- Register form start -->
+      <form action="/register" method="post" class="form_login">
+
+        <br><br>
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Register</h2>
+        </div>
+
+        <div class="info">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="name" class="form-control" placeholder="Name"  name="username" id="username" required >
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input type="email" class="form-control" placeholder="Email" name="email" id="email" required>
+          </div>
+          
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
+          </div>
+        </div>
+        <button type="submit" value="Register" class="button_submit">Submit</button>
+
+        <!-- Login page URL-->
+          <p style="font-size: 13px;margin-top: 10px;">Already have an account! press to <a href="{{ url_for('login')}}"><b>Login</b></p>
+        <!-- Login page  URL-->
+
+        <!-- Error Massage -->
+        <div class="msg" style="font-size: 10px;color: red;">
+          <p style="font-size: 12px;color: red;margin: 10px;">{{ msg }}</p>
+        </div>
+        <!-- Error Massage End-->
+
+      </form>
+      <!-- Register form end -->
 
     </div>
   </body>
