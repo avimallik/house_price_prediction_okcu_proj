@@ -24,6 +24,12 @@ def register():
         password = request.form['password']
         email = request.form['email']
     
+        cursor = mysql.connection.cursor()
+        cursor.execute(''' INSERT INTO hpp_user VALUES(NULL, %s, %s, %s)''',(username, password, email))
+        mysql.connection.commit()
+        cursor.close()
+        msg = 'You have successfully registered, Please back to the Login page !'
+        
     return render_template('register.html', msg=msg)
 
 
